@@ -1,15 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
-start();
+start(6);
 
-static void start()
+static void start(int time)
 {
-    int time = 10;
     int currentTime = 0;
 
     while(currentTime != time)
     {
         Console.Clear();
-        Console.WriteLine(currentTime);
         currentTime++;
-    } 
+        Console.WriteLine(currentTime);
+        Thread.Sleep(1000);
+    }
+
+    Console.Clear();
+    Console.WriteLine("Stopwatch finalizado");
+    Thread.Sleep(2500);
 }
